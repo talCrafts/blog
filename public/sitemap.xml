@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://www.talcrafts.com/2017/03/spring-boot-commandlinerunner-interface/</loc>
+    <lastmod>2017-03-10T22:30:46+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/about/</loc>
+    <lastmod>2014-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/tags/java/</loc>
+    <lastmod>2017-03-10T22:30:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/post/</loc>
+    <lastmod>2017-03-10T22:30:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/categories/spring/</loc>
+    <lastmod>2017-03-10T22:30:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/tags/spring-boot/</loc>
+    <lastmod>2017-03-10T22:30:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/</loc>
+    <lastmod>2017-03-10T22:30:46+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
