@@ -124,7 +124,59 @@
 <p><strong>Example</strong></p>
 </div>
 <div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Here we have two beans <code>Greeting</code> and <code>GreetingReply</code> which implement <code>CommandLineRunner</code> interface.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package com.talcrafts;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+@SpringBootApplication
+public class BlogCodeApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(BlogCodeApplication.class, args);
+    }
+
+
+    @Component
+    @Order(1)
+    class Greeting implements CommandLineRunner {
+
+        @Override
+        public void run(String... args) throws Exception {
+            System.out.println("He said: Hello, how are you ?");
+        }
+    }
+
+    @Component
+    @Order(2)
+    class GreetingReply implements CommandLineRunner {
+
+        @Override
+        public void run(String... args) throws Exception {
+            System.out.println("She replied: I am doing good..thanks for asking!");
+        }
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When we run this application, the following output is printed on console.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">....
+He said: Hello, how are you ?
+She replied: I am doing good..thanks for asking! :
+....</code></pre>
+</div>
 </div>
         
     <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
