@@ -89,6 +89,9 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;If you want to use custom domain please follow &lt;a href=&#34;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&#34;&gt;this&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;I have included some links that can be helpful while following these steps. Please feel free to ask any questions or help.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
@@ -104,6 +107,9 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://atom.io/&#34; class=&#34;bare&#34;&gt;https://atom.io/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&#34; class=&#34;bare&#34;&gt;https://help.github.com/articles/using-a-custom-domain-with-github-pages/&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;</description>
