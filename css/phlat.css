@@ -9,9 +9,9 @@ body{
  * START NAVIGATION
  */
 .navbar-default {
-    background-color: #4dabab;
+    background-color: #e84e40;
     padding: 15px 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .navbar-default .navbar-brand {
@@ -205,7 +205,7 @@ body{
 }
 
 footer {
-    background-color: #dddddd;
+    background-color: #1B86BC;
     margin-top: 20px;
     padding-top: 15px;
     padding-bottom: 0px;
