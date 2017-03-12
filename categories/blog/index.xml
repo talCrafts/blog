@@ -83,7 +83,7 @@
 &lt;p&gt;Create a repo on &lt;a href=&#34;https://github.com&#34;&gt;Github&lt;/a&gt; and check in the content of the &lt;code&gt;public&lt;/code&gt; folder.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Now go to you repository on &lt;a href=&#34;https://github.com&#34; class=&#34;bare&#34;&gt;https://github.com&lt;/a&gt; and create a new branch called &lt;code&gt;gh-pages&lt;/code&gt;. Click on &lt;code&gt;settings&lt;/code&gt; and go to &lt;code&gt;GitHub Pages&lt;/code&gt; section of the page, you will see a message like &lt;code&gt;Your site is published at &lt;a href=&#34;https://&amp;lt;user_name&amp;gt;.github.io/&amp;lt;repo-name&amp;gt;/&#34; class=&#34;bare&#34;&gt;https://&amp;lt;user_name&amp;gt;.github.io/&amp;lt;repo-name&amp;gt;/&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now go to you repository on &lt;a href=&#34;https://github.com&#34; class=&#34;bare&#34;&gt;https://github.com&lt;/a&gt; and create a new branch called &lt;code&gt;gh-pages&lt;/code&gt;. Click on &lt;code&gt;settings&lt;/code&gt; and go to &lt;code&gt;GitHub Pages&lt;/code&gt; section of the page, you will see a message like &lt;code&gt;Your site is published at &lt;a href=&#34;https://&amp;lt;user_name&amp;gt;.github.io/&amp;lt;repo-name&amp;gt;/&#34; class=&#34;bare&#34;&gt;https://&amp;lt;user_name&amp;gt;.github.io/&amp;lt;repo-name&amp;gt;/&lt;/a&gt;&lt;/code&gt;. You can use this link to access your static website or blog.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
