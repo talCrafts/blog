@@ -15,19 +15,19 @@
       <pubDate>Mon, 13 Mar 2017 16:47:50 +0530</pubDate>
       
       <guid>http://www.talcrafts.com/2017/03/make-your-java-code-concise-with-lombok/</guid>
-      <description>&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
+      <description>&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;In every so called plain-old-java-object(POJO), each instance property has &lt;code&gt;getter&lt;/code&gt; and &lt;code&gt;setter&lt;/code&gt; methods. We can write these methods by ourselves or can generate them using any IDE(like Eclipse, IntelliJ). Apart from these accessor and mutator we have to write &lt;code&gt;toString&lt;/code&gt;, &lt;code&gt;hashCode&lt;/code&gt; and &lt;code&gt;equals&lt;/code&gt; methods. These methods make class look cluttered. Using Lombok, We can generate these methods by simply using annotations.&lt;/p&gt;
+&lt;p&gt;In every so called plain-old-java-object(POJO), each instance property has &lt;code&gt;getter&lt;/code&gt; and &lt;code&gt;setter&lt;/code&gt; methods. We can write these methods by ourselves or can generate them using any IDE(like Eclipse, IntelliJ). Apart from these accessor and mutator methods, we have to write &lt;code&gt;toString()&lt;/code&gt;, &lt;code&gt;hashCode()&lt;/code&gt; and &lt;code&gt;equals()&lt;/code&gt; methods. These methods make class look cluttered. Using Lombok, We can generate these methods simply by using annotations.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;
+&lt;strong&gt;Installing Lombok&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Eclipse&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_installing_lombok&#34;&gt;Installing Lombok&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;_eclipse&#34;&gt;Eclipse&lt;/h3&gt;
 &lt;div class=&#34;olist arabic&#34;&gt;
 &lt;ol class=&#34;arabic&#34;&gt;
 &lt;li&gt;
@@ -52,37 +52,33 @@ If it is not working then, you have to start Eclipse by firing &lt;code&gt;$ECLI
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;IntelliJ&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;_intellij&#34;&gt;IntelliJ&lt;/h3&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Here is a plugin and installation instructions &lt;a href=&#34;https://github.com/mplushnikov/lombok-intellij-plugin&#34; class=&#34;bare&#34;&gt;https://github.com/mplushnikov/lombok-intellij-plugin&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Using Lombok&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_using_lombok&#34;&gt;Using Lombok&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Add &lt;code&gt;lombok.jar&lt;/code&gt; in your Java project, either using Maven, Gradle or any other build tools. Below is a sample &lt;code&gt;build.gradle&lt;/code&gt; file.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-gradle&#34; data-lang=&#34;gradle&#34;&gt;dependencies {
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code&gt;dependencies {
     ........
     compile group: &#39;org.projectlombok&#39;, name: &#39;lombok&#39;, version: &#39;1.16.10&#39;
     ........
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Annotations Provided by Lombok&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@Getter and @Setter&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_annotations_provided_by_lombok&#34;&gt;Annotations Provided by Lombok&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;__getter_and_setter&#34;&gt;@Getter and @Setter&lt;/h3&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
 &lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;package com.imti.lombok;
@@ -116,16 +112,17 @@ public class GetterSetterLombok {
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@ToString&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;__tostring&#34;&gt;@ToString&lt;/h3&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;By default, all non-static field will be included. If you want to exclude any, define them in &lt;code&gt;exclude&lt;/code&gt; parameter.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
 &lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;package com.imti.lombok;
-//This will print value of all fields except id (excluded) and STATIC_VAR(static field).
+//This will print value of
+all fields except id (excluded) and STATIC_VAR(static field).
 /* created by imteyaza on 6/8/2016 */
 @ToString(exclude=&#34;id&#34;)
 public class HelloLombok {
@@ -181,9 +178,9 @@ public class HelloLombok {
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;This will generate a warning &lt;code&gt;The field &#39;hell&#39; does not exist&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@Log&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;__log&#34;&gt;@Log&lt;/h3&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;For using any logging library, configure it as per the instructions by provider,then use it&amp;#8217;s annotation. for example for Log4j2, we will use &lt;code&gt;@Log4j2&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -205,9 +202,9 @@ public class HelloWorld {
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;For other supported logging library, please refer to &lt;a href=&#34;https://projectlombok.org/features/Log.html&#34; class=&#34;bare&#34;&gt;https://projectlombok.org/features/Log.html&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@Cleanup (My favourite)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;__cleanup_my_favourite&#34;&gt;@Cleanup (My favourite)&lt;/h3&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
 &lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;package com.imti.lombok;
@@ -215,7 +212,8 @@ import lombok.Cleanup;
 import java.io.*;
 //Created by imteyaza on 3/8/16.
 public class ResourceCleanupLombok {
-    public void readFile(String inputFileName, String outputFileName) throws IOException {
+    public void readFile(String inputFileName, String outputFileName)
+        throws IOException {
         @Cleanup InputStream inputStream = new FileInputStream(inputFileName);
         @Cleanup OutputStream outputStream = new FileOutputStream(outputFileName);
         byte[] buffer = new byte[1024];
@@ -245,9 +243,9 @@ public class ResourceCleanupLombok {
 &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@EqualsAndHashCode&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;__equalsandhashcode&#34;&gt;@EqualsAndHashCode&lt;/h3&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;If a class is annotated with @EqualsAndHashCode,it will use all non-static fields, by default.&lt;br&gt;
 If you want to exclude some parameter, it can be done by defining &lt;code&gt;exclude={&#34;&amp;lt;field name&amp;gt;&#34;}&lt;/code&gt;. If the &lt;code&gt;&amp;lt;field name&amp;gt;&lt;/code&gt; does not exist, it will generate a warning.&lt;/p&gt;
@@ -275,18 +273,12 @@ public class EqualAndHashcodeExample {
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;This will generate a warning &lt;code&gt;The field &#39;hell&#39; does not exist&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;__noargsconstructor_requiredargsconstructor_allargsconstructor&#34;&gt;@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor&lt;/h3&gt;
-&lt;div class=&#34;ulist&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;@NoArgsConstructor:&lt;/strong&gt; generates default or no-arguments constructor for the class.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;@RequiredArgsConstructor:&lt;/strong&gt; creates a constructor with 1 parameter for each non-initialized final field.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;em&gt;@NoArgsConstructor:&lt;/em&gt; generates default or no-arguments constructor for the class.
+&lt;em&gt;@RequiredArgsConstructor:&lt;/em&gt; creates a constructor with 1 parameter for each non-initialized final field.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
@@ -326,66 +318,34 @@ public class HelloLombok {
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;ulist&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;@AllArgsConstructor:&lt;/strong&gt; will create a constructor with all fields.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;em&gt;@AllArgsConstructor:&lt;/em&gt; will create a constructor with all fields.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;@Data&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;__data&#34;&gt;@Data&lt;/h3&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;It bundles @Getter/@Setter, @ToString, @EqualsAndHashCode and @RequiredArgsConstructor.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect2&#34;&gt;
-&lt;h3 id=&#34;_conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;These were some of the features provided by Lombok. Here is a link to list of all features- &lt;code&gt;&lt;a href=&#34;https://projectlombok.org/features/index.html&#34; class=&#34;bare&#34;&gt;https://projectlombok.org/features/index.html&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Conclusion&lt;/em&gt;&lt;/strong&gt;
+These were some of the features provided by Lombok. Here is a link to list of all features- &lt;code&gt;&lt;a href=&#34;https://projectlombok.org/features/index.html&#34; class=&#34;bare&#34;&gt;https://projectlombok.org/features/index.html&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;sect1&#34;&gt;
-&lt;h2 id=&#34;_references&#34;&gt;References&lt;/h2&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;ulist&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Project Page:  &lt;a href=&#34;https://projectlombok.org/index.html&#34; class=&#34;bare&#34;&gt;https://projectlombok.org/index.html&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Download and installation instructions: &lt;a href=&#34;https://projectlombok.org/download.html&#34; class=&#34;bare&#34;&gt;https://projectlombok.org/download.html&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;IntelliJ plugin and installation instructions: &lt;a href=&#34;https://github.com/mplushnikov/lombok-intellij-plugin&#34; class=&#34;bare&#34;&gt;https://github.com/mplushnikov/lombok-intellij-plugin&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Sample application: &lt;a href=&#34;https://github.com/ahmadimt/JavaWithLombok&#34; class=&#34;bare&#34;&gt;https://github.com/ahmadimt/JavaWithLombok&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;admonitionblock note&#34;&gt;
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td class=&#34;icon&#34;&gt;
-&lt;div class=&#34;title&#34;&gt;Note&lt;/div&gt;
-&lt;/td&gt;
-&lt;td class=&#34;content&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;This document is generated with Asciidoctor.&lt;br&gt;
-Official site: &lt;a href=&#34;http://asciidoctor.org/&#34; class=&#34;bare&#34;&gt;http://asciidoctor.org/&lt;/a&gt;&lt;br&gt;
-Here is a great online book for reference to use Asciidoctor: &lt;a href=&#34;https://leanpub.com/awesomeasciidoctornotebook/read&#34; class=&#34;bare&#34;&gt;https://leanpub.com/awesomeasciidoctornotebook/read&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;em&gt;Lombok Project Page:&lt;/em&gt;  &lt;a href=&#34;https://projectlombok.org/index.html&#34; class=&#34;bare&#34;&gt;https://projectlombok.org/index.html&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;em&gt;Download and installation instructions:&lt;/em&gt; &lt;a href=&#34;https://projectlombok.org/download.html&#34; class=&#34;bare&#34;&gt;https://projectlombok.org/download.html&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;em&gt;IntelliJ plugin and installation instructions:&lt;/em&gt; &lt;a href=&#34;https://github.com/mplushnikov/lombok-intellij-plugin&#34; class=&#34;bare&#34;&gt;https://github.com/mplushnikov/lombok-intellij-plugin&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</description>
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;em&gt;Sample application:&lt;/em&gt; &lt;a href=&#34;https://github.com/ahmadimt/JavaWithLombok&#34; class=&#34;bare&#34;&gt;https://github.com/ahmadimt/JavaWithLombok&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
