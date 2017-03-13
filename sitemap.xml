@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.talcrafts.com/2017/03/make-your-java-code-concise-with-lombok/</loc>
+    <lastmod>2017-03-13T16:47:50+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.talcrafts.com/2017/03/create-a-static-website-with-hugo-and-host-it-with-github-pages/</loc>
     <lastmod>2017-03-12T17:37:02+05:30</lastmod>
   </url>
@@ -41,13 +46,25 @@
   
   <url>
     <loc>http://www.talcrafts.com/tags/java/</loc>
-    <lastmod>2017-03-10T22:30:46+05:30</lastmod>
+    <lastmod>2017-03-13T16:47:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/categories/java/</loc>
+    <lastmod>2017-03-13T16:47:50+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/tags/lombok/</loc>
+    <lastmod>2017-03-13T16:47:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.talcrafts.com/post/</loc>
-    <lastmod>2017-03-12T17:37:02+05:30</lastmod>
+    <lastmod>2017-03-13T16:47:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +87,7 @@
   
   <url>
     <loc>http://www.talcrafts.com/</loc>
-    <lastmod>2017-03-12T17:37:02+05:30</lastmod>
+    <lastmod>2017-03-13T16:47:50+05:30</lastmod>
     <priority>0</priority>
   </url>
   
