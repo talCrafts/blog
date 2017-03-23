@@ -4,12 +4,12 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.18.1" />
-    <title>Spring boot CommandLineRunner Interface</title>
+    <title>Elasticsearch Dynamic Mapping</title>
     
     
     
-    <meta name="description" content="description" />
-    <meta name="keywords" content='Java,Spring Boot' />
+    <meta name="description" content="This blog talks about Elasticsearch dynamic templates" />
+    <meta name="keywords" content='Elasticsearch' />
     
         <meta name="author" content="Imteyaz Ahmad" />
     
@@ -71,26 +71,26 @@
                 <div class="col-md-8">
                     <div class="row">
     <div class="col-md-12 content-card">
-        <h1>Spring boot CommandLineRunner Interface</h1>
+        <h1>Elasticsearch Dynamic Mapping</h1>
         
             
             <ul class="list-inline meta">
-                <li><i class="fa fa-calendar"></i>March 10, 2017</li>
+                <li><i class="fa fa-calendar"></i>March 22, 2017</li>
                 <li><i class="fa fa-user"></i>Imteyaz Ahmad</li>
                 
                     
-                    <li><i class="fa fa-folder"></i><a href="http://www.talcrafts.com/categories/spring">Spring</a></li>
+                    <li><i class="fa fa-folder"></i><a href="http://www.talcrafts.com/categories/elasticsearch">Elasticsearch</a></li>
                 
             </ul>
         
         
     <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
-        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2fspring-boot-commandlinerunner-interface%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
-        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2fspring-boot-commandlinerunner-interface%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
-        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2fspring-boot-commandlinerunner-interface%2f&amp;text=Spring%20boot%20CommandLineRunner%20Interface"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
-        <li class="reddit-share"><a target="_blank" href="http://reddit.com/submit?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2fspring-boot-commandlinerunner-interface%2f&amp;title=Spring%20boot%20CommandLineRunner%20Interface"><i class="fa fa-reddit fa-lg"></i>Reddit</a></li>
-        <li class="linkedin-share"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2fspring-boot-commandlinerunner-interface%2f"><i class="fa fa-linkedin fa-lg"></i>LinkedIn</a></li>
-        <li class="stumbleupon-share"><a target="_blank" href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2fspring-boot-commandlinerunner-interface%2f&amp;title=Spring%20boot%20CommandLineRunner%20Interface"><i class="fa fa-stumbleupon fa-lg"></i>StumbleUpon</a></li>
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2felasticsearch-dynamic-mapping%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2felasticsearch-dynamic-mapping%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2felasticsearch-dynamic-mapping%2f&amp;text=Elasticsearch%20Dynamic%20Mapping"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+        <li class="reddit-share"><a target="_blank" href="http://reddit.com/submit?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2felasticsearch-dynamic-mapping%2f&amp;title=Elasticsearch%20Dynamic%20Mapping"><i class="fa fa-reddit fa-lg"></i>Reddit</a></li>
+        <li class="linkedin-share"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2felasticsearch-dynamic-mapping%2f"><i class="fa fa-linkedin fa-lg"></i>LinkedIn</a></li>
+        <li class="stumbleupon-share"><a target="_blank" href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fwww.talcrafts.com%2f2017%2f03%2felasticsearch-dynamic-mapping%2f&amp;title=Elasticsearch%20Dynamic%20Mapping"><i class="fa fa-stumbleupon fa-lg"></i>StumbleUpon</a></li>
     </ul>
 
 
@@ -98,98 +98,211 @@
 <p><strong>Introduction</strong></p>
 </div>
 <div class="paragraph">
-<p>Spring Boot provides an interface called <code>CommandLineRunner</code> which is used indicate that a bean should run when it is contained within a <code>SpringApplication</code>.</p>
-</div>
-<div class="paragraph">
-<p>We can define multiple <code>CommandLineRunner</code> beans in the same application context and set their order by using <code>Ordered</code> interface or by using <code>@Order</code> annotation.</p>
+<p>In Elasticsearch, it is not neccessary to create an index, define mapping before hand and then index a document. For example, We can create a document of type <code>post</code> in an index called <code>blog</code> in Elasticseach by just firing following command:</p>
 </div>
 <div class="paragraph">
 <p></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public interface CommandLineRunner {
-
-	/**
-	 * Callback used to run the bean.
-	 * @param args incoming main method arguments
-	 * @throws Exception on error
-	 */
-	void run(String... args) throws Exception;
-
+<pre class="highlight"><code class="language-json" data-lang="json">PUT blog/post/1
+{
+  "author": "Imteyaz",
+  "age": 30,
+  "post_date": "2017-03-21",
+  "description": "2017-03-21"
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Example</strong></p>
-</div>
-<div class="paragraph">
-<p>Here we have two beans <code>Greeting</code> and <code>GreetingReply</code> which implement <code>CommandLineRunner</code> interface.</p>
+<p>Elasticsearch automatically detects and add new types and fields. This is called <em>dynamic mapping</em>. It is a great feature as it helps in getting started fast. However this can be problematic sometimes. Let&#8217;s have a look on the <em>mapping</em> generated by Elasticsearch for the document.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.talcrafts;
-
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
-
-@SpringBootApplication
-public class BlogCodeApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(BlogCodeApplication.class, args);
-    }
-
-
-    @Component
-    @Order(1)
-    class Greeting implements CommandLineRunner {
-
-        @Override
-        public void run(String... args) throws Exception {
-            System.out.println("He said: Hello, how are you ?");
+<pre class="highlight"><code class="language-json" data-lang="json">GET blog/_mapping
+// Result
+{
+  "blog": {
+    "mappings": {
+      "post": {
+        "properties": {
+          "age": {
+            "type": "long"
+          },
+          "author": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "description": {
+            "type": "date"
+          },
+          "post_date": {
+            "type": "date"
+          }
         }
+      }
     }
-
-    @Component
-    @Order(2)
-    class GreetingReply implements CommandLineRunner {
-
-        @Override
-        public void run(String... args) throws Exception {
-            System.out.println("She replied: I am doing good..thanks for asking!");
-        }
-    }
-
+  }
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>When we run this application, the following output is printed on console.</p>
+<p>Here, the type of <code>description</code> field is <code>date</code> which is not desired. To prevent such thing, we can either disable <code>date_detection</code> or we can define a custom dynamic template.</p>
+</div>
+<div class="paragraph">
+<p><strong>Disable Date Detection</strong></p>
+</div>
+<div class="paragraph">
+<p>Dynamic date detection can be disbled by setting <code>date_detection</code> to <code>false</code></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">....
-He said: Hello, how are you ?
-She replied: I am doing good..thanks for asking! :
-....</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">PUT blog/_mapping/post
+{
+    "date_detection": false
+}</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p><strong>Define Custom Template</strong></p>
+</div>
+<div class="paragraph">
+<p>We can define our own dynamic template and create it as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">PUT _template/idx_template
+{
+    "template": "blog*",
+    "settings": {
+        "number_of_shards": 5,
+        "number_of_replicas": 1
+    },
+    "analysis": {
+        "analyzer": {
+            "mc_analyzer": {
+                "type": "standard",
+                "stopwords": "_english_"
+            }
+        }
+    },
+    "mappings": {
+        "post": {
+          "date_detection": false,
+            "dynamic_templates": [{
+                "date_fields": {
+                    "match": "*_date",
+                    "mapping":{
+                        "type": "date"
+                    }
+                }
+
+            }]
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This template applies to any index whose name start with <code>blog</code>. Here we have disabled date detection and explicitely mapping our field as date that contains <code>_date</code> in it.</p>
+</div>
+<div class="paragraph">
+<p>Now let us create the <code>blog</code> index again and see the mapping generated.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">PUT blog/post/1
+{
+  "author": "Imteyaz",
+  "age": 30,
+  "post_date": "2017-03-21",
+  "description": "2017-03-21"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is the new mapping generated by Elasticsearch:</p>
+</div>
+<div class="listingblock json">
+<div class="content">
+<pre class="highlight"><code>{
+  "blog": {
+    "mappings": {
+      "post": {
+        "dynamic_templates": [
+          {
+            "date_fields": {
+              "match": "*_date",
+              "mapping": {
+                "type": "date"
+              }
+            }
+          }
+        ],
+        "date_detection": false,
+        "properties": {
+          "age": {
+            "type": "long"
+          },
+          "author": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "description": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "post_date": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the new mapping created, the  <code>description</code> field is a <code>text</code> and <code>post_date</code> is a <code>date</code> field.</p>
 </div>
 <div class="paragraph">
 <p><strong>Conclusion</strong></p>
 </div>
 <div class="paragraph">
-<p>In this article, we saw how to use <code>CommandLineRunner</code> interface. It is very usefull when we don&#8217;t have any UI to trigger something or we want something to execute just after the application context is up.</p>
+<p>It&#8217;s better to create a template for index if we don&#8217;t know new fields to be added in future and if somehow we can control the field name.</p>
+</div>
+<div class="paragraph">
+<p><strong>Reference</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-templates.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-templates.html</a></p>
+</li>
+<li>
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html" class="bare">https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html</a></p>
+</li>
+</ul>
 </div>
         
     <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
         
-            <li style=""><a href="http://www.talcrafts.com/tags/java">Java</a></li>
-        
-            <li style=""><a href="http://www.talcrafts.com/tags/spring-boot">Spring Boot</a></li>
+            <li style=""><a href="http://www.talcrafts.com/tags/elasticsearch">Elasticsearch</a></li>
         
     </ul>
 
