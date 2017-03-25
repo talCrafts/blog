@@ -2,3 +2,11 @@
 p {
   text-align: justify;
 }
+
+footer{
+  background-color: #e84e40;
+}
+
+.hljs{
+  color: #c7254e !important;
+}
