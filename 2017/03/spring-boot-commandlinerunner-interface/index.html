@@ -92,86 +92,86 @@
     </ul>
 
 
-        **Introduction**
+        <p><strong>Introduction</strong></p>
 
-Spring Boot provides an interface called `CommandLineRunner` which is used indicate that a bean should run when it is contained within a `SpringApplication`.
+<p>Spring Boot provides an interface called <code>CommandLineRunner</code> which is used indicate that a bean should run when it is contained within a <code>SpringApplication</code>.</p>
 
-We can define multiple `CommandLineRunner` beans in the same application context and set their order by using `Ordered` interface or by using `@Order` annotation.
+<p>We can define multiple <code>CommandLineRunner</code> beans in the same application context and set their order by using <code>Ordered</code> interface or by using <code>@Order</code> annotation.</p>
 
+<p></p>
 
+<h2 id="source-java-linenums">[source,java,linenums]</h2>
 
-[source,java,linenums]
-----
-public interface CommandLineRunner {
+<p>public interface CommandLineRunner {</p>
 
-	/**
-	 * Callback used to run the bean.
-	 * @param args incoming main method arguments
-	 * @throws Exception on error
-	 */
-	void run(String... args) throws Exception;
+<pre><code>/**
+ * Callback used to run the bean.
+ * @param args incoming main method arguments
+ * @throws Exception on error
+ */
+void run(String... args) throws Exception;
+</code></pre>
 
-}
-----
+<h2 id="toc_1">}</h2>
 
-**Example**
+<p><strong>Example</strong></p>
 
-Here we have two beans `Greeting` and `GreetingReply` which implement `CommandLineRunner` interface.
+<p>Here we have two beans <code>Greeting</code> and <code>GreetingReply</code> which implement <code>CommandLineRunner</code> interface.</p>
 
-[source,java,linenums]
-----
-package com.talcrafts;
+<h2 id="source-java-linenums-1">[source,java,linenums]</h2>
 
-import org.springframework.boot.CommandLineRunner;
+<p>package com.talcrafts;</p>
+
+<p>import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Component;</p>
 
-@SpringBootApplication
-public class BlogCodeApplication {
+<p>@SpringBootApplication
+public class BlogCodeApplication {</p>
 
-    public static void main(String[] args) {
-        SpringApplication.run(BlogCodeApplication.class, args);
-    }
-
-
-    @Component
-    @Order(1)
-    class Greeting implements CommandLineRunner {
-
-        @Override
-        public void run(String... args) throws Exception {
-            System.out.println("He said: Hello, how are you ?");
-        }
-    }
-
-    @Component
-    @Order(2)
-    class GreetingReply implements CommandLineRunner {
-
-        @Override
-        public void run(String... args) throws Exception {
-            System.out.println("She replied: I am doing good..thanks for asking!");
-        }
-    }
-
+<pre><code>public static void main(String[] args) {
+    SpringApplication.run(BlogCodeApplication.class, args);
 }
-----
 
-When we run this application, the following output is printed on console.
 
-[source,java]
-----
-....
+@Component
+@Order(1)
+class Greeting implements CommandLineRunner {
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println(&quot;He said: Hello, how are you ?&quot;);
+    }
+}
+
+@Component
+@Order(2)
+class GreetingReply implements CommandLineRunner {
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println(&quot;She replied: I am doing good..thanks for asking!&quot;);
+    }
+}
+</code></pre>
+
+<h2 id="toc_3">}</h2>
+
+<p>When we run this application, the following output is printed on console.</p>
+
+<h2 id="source-java">[source,java]</h2>
+
+<p>&hellip;.
 He said: Hello, how are you ?
-She replied: I am doing good..thanks for asking! :
-....
-----
+She replied: I am doing good..thanks for asking! :</p>
 
-*Conclusion*
+<h2 id="toc_5">&hellip;.</h2>
 
-In this article, we saw how to use `CommandLineRunner` interface. It is very usefull when we don't have any UI to trigger something or we want something to execute just after the application context is up.
+<p><em>Conclusion</em></p>
+
+<p>In this article, we saw how to use <code>CommandLineRunner</code> interface. It is very usefull when we don&rsquo;t have any UI to trigger something or we want something to execute just after the application context is up.</p>
         
     <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
         
