@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.talcrafts.com/2017/03/elasticsearch-dynamic-mapping/</loc>
-    <lastmod>2017-03-22T20:56:25+05:30</lastmod>
+    <loc>http://www.talcrafts.com/2017/03/what-is-data-science/</loc>
+    <lastmod>2017-03-30T14:21:41+05:30</lastmod>
   </url>
   
   <url>
@@ -43,6 +43,18 @@
   </url>
   
   <url>
+    <loc>http://www.talcrafts.com/tags/data-science/</loc>
+    <lastmod>2017-03-30T14:21:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.talcrafts.com/categories/data-science/</loc>
+    <lastmod>2017-03-30T14:21:41+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.talcrafts.com/tags/edge-computing/</loc>
     <lastmod>2017-03-22T20:14:19+05:30</lastmod>
     <priority>0</priority>
@@ -51,18 +63,6 @@
   <url>
     <loc>http://www.talcrafts.com/categories/edge-computing/</loc>
     <lastmod>2017-03-22T20:14:19+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.talcrafts.com/tags/elasticsearch/</loc>
-    <lastmod>2017-03-22T20:56:25+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.talcrafts.com/categories/elasticsearch/</loc>
-    <lastmod>2017-03-22T20:56:25+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -104,7 +104,7 @@
   
   <url>
     <loc>http://www.talcrafts.com/post/</loc>
-    <lastmod>2017-03-22T20:56:25+05:30</lastmod>
+    <lastmod>2017-03-30T14:21:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,7 +127,7 @@
   
   <url>
     <loc>http://www.talcrafts.com/</loc>
-    <lastmod>2017-03-22T20:56:25+05:30</lastmod>
+    <lastmod>2017-03-30T14:21:41+05:30</lastmod>
     <priority>0</priority>
   </url>
   

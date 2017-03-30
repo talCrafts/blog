@@ -3,7 +3,7 @@
     <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="generator" content="Hugo 0.19" />
     <title>Make your Java code concise with Lombok</title>
     
     
@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="http://www.talcrafts.com/css/highlightjs-themes/androidstudio.css" />
     <link rel="stylesheet" href="http://www.talcrafts.com/css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://www.talcrafts.com/css/phlat.css" />
-    <link rel="stylesheet" href="http://www.talcrafts.com/css/mdb.min.css" />
-    <link rel="stylesheet" href="http://www.talcrafts.com/css/style.css" />
     
         
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -94,94 +92,63 @@
     </ul>
 
 
-        <div class="paragraph">
-<p><strong>Introduction</strong></p>
-</div>
-<div class="paragraph">
-<p>In every so called plain-old-java-object(POJO), each instance property has <code>getter</code> and <code>setter</code> methods. We can write these methods by ourselves or can generate them using any IDE(like Eclipse, IntelliJ). Apart from these accessor and mutator methods, we have to write <code>toString()</code>, <code>hashCode()</code> and <code>equals()</code> methods. These methods make class look cluttered. Using Lombok, We can generate these methods simply by using annotations.</p>
-</div>
-<div class="paragraph">
-<p>
-<strong>Installing Lombok</strong></p>
-</div>
-<div class="paragraph">
-<p><strong><em>Eclipse</em></strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Download Lombok from
-<a href="https://projectlombok.org/download.html" class="bare">https://projectlombok.org/download.html</a>.</p>
-</li>
-<li>
-<p>Run it by double clicking on it or by firing java -jar lombok.jar.</p>
-</li>
-<li>
-<p>It will open an explorer window like shown as below:
-<span class="image"><img src=" /img/lombok_screen1.png" alt="Lombok"></span></p>
-</li>
-<li>
-<p>Point to folder containing Eclipse by clicking Specify Location..</p>
-</li>
-<li>
-<p>After that, click on Install/Update</p>
-</li>
-<li>
-<p>Once installation is done&#8230;&#8203;add Lombok dependency in the project and restart Eclipse.
-If it is not working then, you have to start Eclipse by firing <code>$ECLIPSE_HOME/eclipse --clean</code>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong><em>IntelliJ</em></strong></p>
-</div>
-<div class="paragraph">
-<p>Here is a plugin and installation instructions <a href="https://github.com/mplushnikov/lombok-intellij-plugin" class="bare">https://github.com/mplushnikov/lombok-intellij-plugin</a></p>
-</div>
-<div class="paragraph">
-<p><strong>Using Lombok</strong></p>
-</div>
-<div class="paragraph">
-<p>Add <code>lombok.jar</code> in your Java project, either using Maven, Gradle or any other build tools. Below is a sample <code>build.gradle</code> file.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>dependencies {
+        *Introduction*
+
+In every so called plain-old-java-object(POJO), each instance property has `getter` and `setter` methods. We can write these methods by ourselves or can generate them using any IDE(like Eclipse, IntelliJ). Apart from these accessor and mutator methods, we have to write `toString()`, `hashCode()` and `equals()` methods. These methods make class look cluttered. Using Lombok, We can generate these methods simply by using annotations.
+
+
+*Installing Lombok*
+
+*_Eclipse_*
+
+  1. Download Lombok from
+  https://projectlombok.org/download.html.
+  2. Run it by double clicking on it or by firing java -jar lombok.jar.
+  3. It will open an explorer window like shown as below:
+  image: /img/lombok_screen1.png[Lombok,align="center"]
+  4. Point to folder containing Eclipse by clicking Specify Location..
+  5. After that, click on Install/Update
+  6. Once installation is done...add Lombok dependency in the project and restart Eclipse.
+    If it is not working then, you have to start Eclipse by firing `$ECLIPSE_HOME/eclipse --clean`.
+
+*_IntelliJ_*
+
+Here is a plugin and installation instructions https://github.com/mplushnikov/lombok-intellij-plugin
+
+*Using Lombok*
+
+Add `lombok.jar` in your Java project, either using Maven, Gradle or any other build tools. Below is a sample `build.gradle` file.
+[source]
+----
+dependencies {
     ........
     compile group: 'org.projectlombok', name: 'lombok', version: '1.16.10'
     ........
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Annotations Provided by Lombok</strong></p>
-</div>
-<div class="paragraph">
-<p><strong><em>@Getter and @Setter</em></strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+----
+
+*Annotations Provided by Lombok*
+
+*_@Getter and @Setter_*
+
+[source,java,linenums]
+----
+package com.imti.lombok;
 @Getter
 @Setter
 public class GetterSetterLombok {
     private String name;
     private String message;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will generate <code>public</code> getter/setter for every non-static field. If you want to define access level, it can be done by specifying <code>AccessLevel</code></p>
-</div>
-<div class="paragraph">
-<p>e.g.: <code>@Setter(AccessLevel.PROTECTED) private String name;</code></p>
-</div>
-<div class="paragraph">
-<p>If you do NOT want to generate getter/setter for a particular field, then you can disable it by invoking <code>AccessLevel.NONE</code>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+----
+This will generate `public` getter/setter for every non-static field. If you want to define access level, it can be done by specifying `AccessLevel`
+
+e.g.: `@Setter(AccessLevel.PROTECTED) private String name;`
+
+If you do NOT want to generate getter/setter for a particular field, then you can disable it by invoking `AccessLevel.NONE`.
+
+[source,java,linenums]
+package com.imti.lombok;
 @Getter
 @Setter
 public class GetterSetterLombok {
@@ -189,18 +156,14 @@ public class GetterSetterLombok {
     private Long id;
     private String name;
     private String message;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong><em>@ToString</em></strong></p>
-</div>
-<div class="paragraph">
-<p>By default, all non-static field will be included. If you want to exclude any, define them in <code>exclude</code> parameter.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+
+*_@ToString_*
+
+By default, all non-static field will be included. If you want to exclude any, define them in `exclude` parameter.
+[source,java,linenums]
+----
+package com.imti.lombok;
 //This will print value of
 all fields except id (excluded) and STATIC_VAR(static field).
 /* created by imteyaza on 6/8/2016 */
@@ -210,15 +173,13 @@ public class HelloLombok {
 	private String id;
 	private String name;
 	private String message;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Here is test class for the same.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">public class HelloLombokTest {
+}
+----
+Here is test class for the same.
+
+[source,java,linenums]
+----
+public class HelloLombokTest {
     @Test
     public void testToString(){
         HelloLombok helloLombok = new HelloLombok();
@@ -227,19 +188,16 @@ public class HelloLombok {
         helloLombok.setName("Imteyaz");
         System.out.println(helloLombok.toString());
     }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Output of this test is:<br>
-<code>HelloLombok(name=Imteyaz, message=Hello Lombok!)</code></p>
-</div>
-<div class="paragraph">
-<p>Note: If you, by mistake, typed name of non-existing field, it will generate a warning!</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+----
+Output of this test is: +
+`HelloLombok(name=Imteyaz, message=Hello Lombok!)`
+
+Note: If you, by mistake, typed name of non-existing field, it will generate a warning!
+
+[source,java,linenums]
+----
+package com.imti.lombok;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -252,42 +210,35 @@ public class HelloLombok {
     private String id;
     private String name;
     private String message;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will generate a warning <code>The field 'hell' does not exist</code></p>
-</div>
-<div class="paragraph">
-<p><strong><em>@Log</em></strong></p>
-</div>
-<div class="paragraph">
-<p>For using any logging library, configure it as per the instructions by provider,then use it&#8217;s annotation. for example for Log4j2, we will use <code>@Log4j2</code></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">@Log4j2
+}
+----
+
+This will generate a warning `The field 'hell' does not exist`
+
+*_@Log_*
+
+For using any logging library, configure it as per the instructions by provider,then use it's annotation. for example for Log4j2, we will use `@Log4j2`
+
+[source,java,linenums]
+----
+@Log4j2
 public class HelloWorld {
 	private String name;
 	public static void main(String args []){
 		log.info("Inside the main method");
 	}
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>It creates following line for you<br>
-<code>private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager.getLogger(HelloWorld.class);</code></p>
-</div>
-<div class="paragraph">
-<p>For other supported logging library, please refer to <a href="https://projectlombok.org/features/Log.html" class="bare">https://projectlombok.org/features/Log.html</a></p>
-</div>
-<div class="paragraph">
-<p><strong><em>@Cleanup (My favourite)</em></strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+----
+It creates following line for you +
+`private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.LogManager.getLogger(HelloWorld.class);`
+
+For other supported logging library, please refer to https://projectlombok.org/features/Log.html
+
+*_@Cleanup (My favourite)_*
+
+[source,java,linenums]
+----
+package com.imti.lombok;
 import lombok.Cleanup;
 import java.io.*;
 //Created by imteyaza on 3/8/16.
@@ -305,34 +256,22 @@ public class ResourceCleanupLombok {
             outputStream.write(buffer, 0, line);
         }
     }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>By default it looks for a method called <code>close()</code> in the type of Object you are cleaning up.If you have a custom method name, it can called as <code>@Cleanup("destroy")</code>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<code>The destroy() method must be a non-argument method.</code>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong><em>@EqualsAndHashCode</em></strong></p>
-</div>
-<div class="paragraph">
-<p>If a class is annotated with @EqualsAndHashCode,it will use all non-static fields, by default.<br>
-If you want to exclude some parameter, it can be done by defining <code>exclude={"&lt;field name&gt;"}</code>. If the <code>&lt;field name&gt;</code> does not exist, it will generate a warning.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+----
+[%hardbreaks]
+By default it looks for a method called `close()` in the type of Object you are cleaning up.If you have a custom method name, it can called as `@Cleanup("destroy")`.
+
+[NOTE]
+`The destroy() method must be a non-argument method.`
+
+*_@EqualsAndHashCode_*
+
+If a class is annotated with @EqualsAndHashCode,it will use all non-static fields, by default. +
+If you want to exclude some parameter, it can be done by defining `exclude={"<field name>"}`. If the `<field name>` does not exist, it will generate a warning.
+
+[source,java,linenums]
+----
+package com.imti.lombok;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -347,22 +286,19 @@ public class EqualAndHashcodeExample {
     private String id;
     private String name;
     private String message;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will generate a warning <code>The field 'hell' does not exist</code></p>
-</div>
-<div class="paragraph">
-<p><strong><em>@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor</em></strong></p>
-</div>
-<div class="paragraph">
-<p><em>@NoArgsConstructor:</em> generates default or no-arguments constructor for the class.
-<em>@RequiredArgsConstructor:</em> creates a constructor with 1 parameter for each non-initialized final field.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+----
+This will generate a warning `The field 'hell' does not exist`
+
+
+*_@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor_*
+
+_@NoArgsConstructor:_ generates default or no-arguments constructor for the class.
+_@RequiredArgsConstructor:_ creates a constructor with 1 parameter for each non-initialized final field.
+
+[source,java,linenums]
+----
+package com.imti.lombok;
 import lombok.*;
 //Created by imteyaza on 6/8/16.
 @Getter
@@ -374,15 +310,13 @@ public class HelloLombok {
     private String id;
     private String name;
     private final String message;
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>will generate a class like below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">package com.imti.lombok;
+}
+----
+will generate a class like below:
+
+[source,java,linenums]
+----
+package com.imti.lombok;
 import lombok.*;
 // Created by imteyaza on 6/8/16.
 public class HelloLombok {
@@ -395,39 +329,29 @@ public class HelloLombok {
         this.message = message;
     }
     //Other codes omitted for brevity
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><em>@AllArgsConstructor:</em> will create a constructor with all fields.</p>
-</div>
-<div class="paragraph">
-<p><strong><em>@Data</em></strong></p>
-</div>
-<div class="paragraph">
-<p>It bundles @Getter/@Setter, @ToString, @EqualsAndHashCode and @RequiredArgsConstructor.</p>
-</div>
-<div class="paragraph">
-<p><strong><em>Conclusion</em></strong>
+}
+----
+
+_@AllArgsConstructor:_ will create a constructor with all fields.
+
+*_@Data_*
+
+It bundles @Getter/@Setter, @ToString, @EqualsAndHashCode and @RequiredArgsConstructor.
+
+*_Conclusion_*
 These were some of the features provided by Lombok. Here is a link to list of all features-
-<code><a href="https://projectlombok.org/features/index.html" class="bare">https://projectlombok.org/features/index.html</a></code></p>
-</div>
-<div class="paragraph">
-<p><strong>References</strong></p>
-</div>
-<div class="paragraph">
-<p><em>Lombok Project Page:</em>  <a href="https://projectlombok.org/index.html" class="bare">https://projectlombok.org/index.html</a></p>
-</div>
-<div class="paragraph">
-<p><em>Download and installation instructions:</em> <a href="https://projectlombok.org/download.html" class="bare">https://projectlombok.org/download.html</a></p>
-</div>
-<div class="paragraph">
-<p><em>IntelliJ plugin and installation instructions:</em> <a href="https://github.com/mplushnikov/lombok-intellij-plugin" class="bare">https://github.com/mplushnikov/lombok-intellij-plugin</a></p>
-</div>
-<div class="paragraph">
-<p><em>Sample application:</em>
-<a href="https://github.com/ahmadimt/JavaWithLombok" class="bare">https://github.com/ahmadimt/JavaWithLombok</a></p>
-</div>
+`https://projectlombok.org/features/index.html`
+
+*References*
+
+_Lombok Project Page:_  https://projectlombok.org/index.html
+
+_Download and installation instructions:_ https://projectlombok.org/download.html
+
+_IntelliJ plugin and installation instructions:_ https://github.com/mplushnikov/lombok-intellij-plugin
+
+_Sample application:_
+https://github.com/ahmadimt/JavaWithLombok
         
     <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
         
@@ -486,7 +410,7 @@ These were some of the features provided by Lombok. Here is a link to list of al
         <h5>Recent Posts</h5>
         <ul class="list-unstyled posts-recent">
             
-                <li><a href="http://www.talcrafts.com/2017/03/elasticsearch-dynamic-mapping/">Elasticsearch Dynamic Mapping</a></li>
+                <li><a href="http://www.talcrafts.com/2017/03/what-is-data-science/">What is data science?</a></li>
             
                 <li><a href="http://www.talcrafts.com/2017/03/edge-computing/">Edge Computing</a></li>
             
@@ -524,9 +448,9 @@ These were some of the features provided by Lombok. Here is a link to list of al
                     
                         <li><a href="http://www.talcrafts.com/categories/blog">blog</a></li>
                     
-                        <li><a href="http://www.talcrafts.com/categories/edge-computing">edge-computing</a></li>
+                        <li><a href="http://www.talcrafts.com/categories/data-science">data-science</a></li>
                     
-                        <li><a href="http://www.talcrafts.com/categories/elasticsearch">elasticsearch</a></li>
+                        <li><a href="http://www.talcrafts.com/categories/edge-computing">edge-computing</a></li>
                     
                         <li><a href="http://www.talcrafts.com/categories/java">java</a></li>
                     
@@ -545,8 +469,8 @@ These were some of the features provided by Lombok. Here is a link to list of al
         <h5>Support This Site</h5>
         <p>
             If my blog was helpful to you, then please consider visiting my
-            <a href="#">Amazon Wishlist</a> or donating via <a href="#">Paypal</a> 
-            or <a href="#">Square Cash</a> 
+            <a href="http://amzn.com/w/1YU2424SGEF1B">Amazon Wishlist</a> or donating via <a href="https://paypal.me/nraboy">Paypal</a>
+            or <a href="https://cash.me/$nraboy">Square Cash</a>
         </p>
     </div>
 </div>
@@ -608,9 +532,7 @@ These were some of the features provided by Lombok. Here is a link to list of al
     </a>
 </div>
 <script src="http://www.talcrafts.com/js/jquery-2.2.1.min.js"></script>
-<script src="http://www.talcrafts.com/js/tether.min.js"></script>
 <script src="http://www.talcrafts.com/js/bootstrap.min.js"></script>
-<script src="http://www.talcrafts.com/js/mdb.min.js"></script>
 <script src="http://www.talcrafts.com/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>

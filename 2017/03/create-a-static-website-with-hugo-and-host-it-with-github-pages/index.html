@@ -3,7 +3,7 @@
     <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.18.1" />
+    <meta name="generator" content="Hugo 0.19" />
     <title>Create a static website with Hugo and Host it with Github Pages</title>
     
     
@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="http://www.talcrafts.com/css/highlightjs-themes/androidstudio.css" />
     <link rel="stylesheet" href="http://www.talcrafts.com/css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://www.talcrafts.com/css/phlat.css" />
-    <link rel="stylesheet" href="http://www.talcrafts.com/css/mdb.min.css" />
-    <link rel="stylesheet" href="http://www.talcrafts.com/css/style.css" />
     
         
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -94,44 +92,26 @@
     </ul>
 
 
-        <div class="paragraph">
-<p><strong>Indroduction</strong></p>
-</div>
-<div class="paragraph">
-<p>In this article we will explain how to create a blog site with minimum cost and with absolutely no hosting server of our own.</p>
-</div>
-<div class="paragraph">
-<p><strong>Tools Used</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://gohugo.io/">Hugo</a> : A fast and modern static website engine.</p>
-</li>
-<li>
-<p>Any text editor of your choice. I prefer <a href="https://atom.io/">Atom</a> because of its plugeable architecture and its in-built support for editing and previewing mark-down files.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p></p>
-</div>
-<div class="paragraph">
-<p><strong>Steps Followed</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Download and install <a href="https://gohugo.io/">Hugo</a>. More details provided in <a href="https://gohugo.io/overview/installing/">getting started</a> guide of Hugo.</p>
-</li>
-<li>
-<p>Once Hugo is installed, open a terminal and go the folder where you want to keep the code for your blog or static website.</p>
-</li>
-<li>
-<p>Run  <code>hugo new site &lt;your-site-name&gt;</code> to create a new website. It will create following directories in the folder:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>    ----
+        *Indroduction*
+
+In this article we will explain how to create a blog site with minimum cost and with absolutely no hosting server of our own.
+
+*Tools Used*
+
+- https://gohugo.io/[Hugo] : A fast and modern static website engine.
+- Any text editor of your choice. I prefer https://atom.io/[Atom] because of its plugeable architecture and its in-built support for editing and previewing mark-down files.
+
+
+
+*Steps Followed*
+
+- Download and install https://gohugo.io/[Hugo]. More details provided in https://gohugo.io/overview/installing/[getting started] guide of Hugo.
+
+- Once Hugo is installed, open a terminal and go the folder where you want to keep the code for your blog or static website.
+
+- Run  `hugo new site <your-site-name>` to create a new website. It will create following directories in the folder:
+[source]
+    ----
     ├── archetypes
     ├── config.toml
     ├── content
@@ -140,58 +120,33 @@
     ├── public
     ├── static
     └── themes
-    ----</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Now go to <a href="http://themes.gohugo.io/" class="bare">http://themes.gohugo.io/</a> and clone a theme of your choice in <code>themes</code> folder.</p>
-</li>
-<li>
-<p>Once done, copy the <code>config.toml</code> from the downloaded theme into the root folder of the the website and run <code>hugo server --buildDrafts</code> from the root directory. It will start the server on port 1313. You can access the site from <code><a href="http://localhost:1313" class="bare">http://localhost:1313</a></code></p>
-</li>
-<li>
-<p>To create a new blog entry, run <code>hugo new post/&lt;blog-file-name&gt;.md</code>. It will create a file in <code>content/post/</code> folder.</p>
-</li>
-<li>
-<p>Open the newly created file in any of the editor and start writing the content of the blog.</p>
-</li>
-<li>
-<p>Once you are done with your content, delete content of <code>public</code> folder and run <code>hugo</code> command to regenerate the files.</p>
-</li>
-<li>
-<p>Create a repo on <a href="https://github.com">Github</a> and check in the content of the <code>public</code> folder.</p>
-</li>
-<li>
-<p>Now go to you repository on <a href="https://github.com" class="bare">https://github.com</a> and create a new branch called <code>gh-pages</code>. Click on <code>settings</code> and go to <code>GitHub Pages</code> section of the page, you will see a message like <code>Your site is published at <a href="https://&lt;user_name&gt;.github.io/&lt;repo-name&gt;/" class="bare">https://&lt;user_name&gt;.github.io/&lt;repo-name&gt;/</a></code>. You can use this link to access your static website or blog.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If you want to use custom domain please follow <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">this</a></p>
-</div>
-<div class="paragraph">
-<p>I have included some links that can be helpful while following these steps. Please feel free to ask any questions or help.</p>
-</div>
-<div class="paragraph">
-<p>Any feedbacks or suggestions will be greatly appreciated.</p>
-</div>
-<div class="paragraph">
-<p><strong>Reference</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://gohugo.io/" class="bare">https://gohugo.io/</a></p>
-</li>
-<li>
-<p><a href="https://atom.io/" class="bare">https://atom.io/</a></p>
-</li>
-<li>
-<p><a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" class="bare">https://help.github.com/articles/using-a-custom-domain-with-github-pages/</a></p>
-</li>
-</ul>
-</div>
+    ----
+
+- Now go to http://themes.gohugo.io/ and clone a theme of your choice in `themes` folder.
+
+- Once done, copy the `config.toml` from the downloaded theme into the root folder of the the website and run `hugo server --buildDrafts` from the root directory. It will start the server on port 1313. You can access the site from `http://localhost:1313`
+
+- To create a new blog entry, run `hugo new post/<blog-file-name>.md`. It will create a file in `content/post/` folder.
+
+- Open the newly created file in any of the editor and start writing the content of the blog.
+
+- Once you are done with your content, delete content of `public` folder and run `hugo` command to regenerate the files.
+
+- Create a repo on https://github.com[Github] and check in the content of the `public` folder.
+
+- Now go to you repository on https://github.com and create a new branch called `gh-pages`. Click on `settings` and go to `GitHub Pages` section of the page, you will see a message like `Your site is published at https://<user_name>.github.io/<repo-name>/`. You can use this link to access your static website or blog.
+
+If you want to use custom domain please follow https://help.github.com/articles/using-a-custom-domain-with-github-pages/[this]
+
+I have included some links that can be helpful while following these steps. Please feel free to ask any questions or help.
+
+Any feedbacks or suggestions will be greatly appreciated.
+
+*Reference*
+
+- https://gohugo.io/
+- https://atom.io/
+- https://help.github.com/articles/using-a-custom-domain-with-github-pages/
         
     <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
         
@@ -250,7 +205,7 @@
         <h5>Recent Posts</h5>
         <ul class="list-unstyled posts-recent">
             
-                <li><a href="http://www.talcrafts.com/2017/03/elasticsearch-dynamic-mapping/">Elasticsearch Dynamic Mapping</a></li>
+                <li><a href="http://www.talcrafts.com/2017/03/what-is-data-science/">What is data science?</a></li>
             
                 <li><a href="http://www.talcrafts.com/2017/03/edge-computing/">Edge Computing</a></li>
             
@@ -288,9 +243,9 @@
                     
                         <li><a href="http://www.talcrafts.com/categories/blog">blog</a></li>
                     
-                        <li><a href="http://www.talcrafts.com/categories/edge-computing">edge-computing</a></li>
+                        <li><a href="http://www.talcrafts.com/categories/data-science">data-science</a></li>
                     
-                        <li><a href="http://www.talcrafts.com/categories/elasticsearch">elasticsearch</a></li>
+                        <li><a href="http://www.talcrafts.com/categories/edge-computing">edge-computing</a></li>
                     
                         <li><a href="http://www.talcrafts.com/categories/java">java</a></li>
                     
@@ -309,8 +264,8 @@
         <h5>Support This Site</h5>
         <p>
             If my blog was helpful to you, then please consider visiting my
-            <a href="#">Amazon Wishlist</a> or donating via <a href="#">Paypal</a> 
-            or <a href="#">Square Cash</a> 
+            <a href="http://amzn.com/w/1YU2424SGEF1B">Amazon Wishlist</a> or donating via <a href="https://paypal.me/nraboy">Paypal</a>
+            or <a href="https://cash.me/$nraboy">Square Cash</a>
         </p>
     </div>
 </div>
@@ -372,9 +327,7 @@
     </a>
 </div>
 <script src="http://www.talcrafts.com/js/jquery-2.2.1.min.js"></script>
-<script src="http://www.talcrafts.com/js/tether.min.js"></script>
 <script src="http://www.talcrafts.com/js/bootstrap.min.js"></script>
-<script src="http://www.talcrafts.com/js/mdb.min.js"></script>
 <script src="http://www.talcrafts.com/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Science on TalCrafts Blog</title>
+    <link>http://www.talcrafts.com/categories/data-science/index.xml</link>
+    <description>Recent content in Data Science on TalCrafts Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://www.talcrafts.com/categories/data-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What is data science?</title>
+      <link>http://www.talcrafts.com/2017/03/what-is-data-science/</link>
+      <pubDate>Thu, 30 Mar 2017 14:21:41 +0530</pubDate>
+      
+      <guid>http://www.talcrafts.com/2017/03/what-is-data-science/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I heard about this term &amp;lsquo;data science&amp;rsquo; quite recently. Many blogs, articles can be found over the net which talk about how to do data science. As businesses started seeing value in doing data science, overall tech industry is shifting its gears and making sure that their people have required skills to do data science. In fact, I too recently started attending classes to learn probability theory. Different people mean different things when they use the term &amp;lsquo;data science&amp;rsquo;. Few confuse it with &amp;lsquo;big data&amp;rsquo;. So I thought of writing this blog to explain &amp;lsquo;what is data science&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If we google dictionary meaning of two terms &amp;lsquo;data&amp;rsquo; and &amp;lsquo;science&amp;rsquo;, we get below definitions:&lt;/p&gt;
+
+&lt;p&gt;Data: (noun) facts and statistics collected together for reference or analysis&lt;/p&gt;
+
+&lt;p&gt;Science:(noun) A systematically organized body of knowledge on a particular subject&lt;/p&gt;
+
+&lt;p&gt;Data science is all about the knowledge of data. But what is a knowledge? Knowledge is &amp;lsquo;Facts, information, and skills acquired by a person through experience or education&amp;rsquo;. Knowledge is &amp;lsquo;the theoretical or practical understanding of a subject&amp;rsquo;. So data science is a faculty of science which deals with analysis of collected facts and statistics to gain more knowledge about data.&lt;/p&gt;
+
+&lt;p&gt;To be able to gain more knowledge about data, one should have&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Good hacking skills (A different way to look at data and an interest to play with data to gain knowledge about it)&lt;/li&gt;
+&lt;li&gt;Knowledge of mathematics and statistics - so that you know how to play with data&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Data science is a journey from &amp;lsquo;data&amp;rsquo; to &amp;lsquo;insights&amp;rsquo;. It is different from big data in that big data deals with processing of a huge amount of data which cannot be accomodated/processed on a single machine. This &amp;lsquo;processing&amp;rsquo; could be anything and may be not at all be targeted to do analysis of data. Data science is about applying different mathematical and statistical models to your data to gain more insights hidden into your data. This can be done on even a small sample dataset and you need probably do not need big data to do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We are living in the age of data. Lots and lots of data is collected for actions users perform while they simply browse over the internet or buy things at shopping malls or travel to a place during vacation or monitor their fitness using apps like google fit. This collected data can be analyzed with the help of data science to understand more insights from it. These insights can help businesses to recommend right products to their customers or for non-business causes like improving the health of the society.&lt;/p&gt;
+
+&lt;p&gt;Appreciate your comments/feedback/suggestions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Further Reading&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Data_science&#34;&gt;https://en.wikipedia.org/wiki/Data_science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
