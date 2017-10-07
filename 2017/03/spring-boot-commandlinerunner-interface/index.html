@@ -3,7 +3,7 @@
     <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.19" />
+    <meta name="generator" content="Hugo 0.18.1" />
     <title>Spring boot CommandLineRunner Interface</title>
     
     
@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="http://www.talcrafts.com/css/highlightjs-themes/androidstudio.css" />
     <link rel="stylesheet" href="http://www.talcrafts.com/css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://www.talcrafts.com/css/phlat.css" />
+    <link rel="stylesheet" href="http://www.talcrafts.com/css/mdb.min.css" />
+    <link rel="stylesheet" href="http://www.talcrafts.com/css/style.css" />
     
         
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -92,86 +94,96 @@
     </ul>
 
 
-        <p><strong>Introduction</strong></p>
-
+        <div class="paragraph">
+<p><strong>Introduction</strong></p>
+</div>
+<div class="paragraph">
 <p>Spring Boot provides an interface called <code>CommandLineRunner</code> which is used indicate that a bean should run when it is contained within a <code>SpringApplication</code>.</p>
-
+</div>
+<div class="paragraph">
 <p>We can define multiple <code>CommandLineRunner</code> beans in the same application context and set their order by using <code>Ordered</code> interface or by using <code>@Order</code> annotation.</p>
-
+</div>
+<div class="paragraph">
 <p></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">public interface CommandLineRunner {
 
-<h2 id="source-java-linenums">[source,java,linenums]</h2>
+	/**
+	 * Callback used to run the bean.
+	 * @param args incoming main method arguments
+	 * @throws Exception on error
+	 */
+	void run(String... args) throws Exception;
 
-<p>public interface CommandLineRunner {</p>
-
-<pre><code>/**
- * Callback used to run the bean.
- * @param args incoming main method arguments
- * @throws Exception on error
- */
-void run(String... args) throws Exception;
-</code></pre>
-
-<h2 id="toc_1">}</h2>
-
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p><strong>Example</strong></p>
-
+</div>
+<div class="paragraph">
 <p>Here we have two beans <code>Greeting</code> and <code>GreetingReply</code> which implement <code>CommandLineRunner</code> interface.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package com.talcrafts;
 
-<h2 id="source-java-linenums-1">[source,java,linenums]</h2>
-
-<p>package com.talcrafts;</p>
-
-<p>import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;</p>
+import org.springframework.stereotype.Component;
 
-<p>@SpringBootApplication
-public class BlogCodeApplication {</p>
+@SpringBootApplication
+public class BlogCodeApplication {
 
-<pre><code>public static void main(String[] args) {
-    SpringApplication.run(BlogCodeApplication.class, args);
-}
-
-
-@Component
-@Order(1)
-class Greeting implements CommandLineRunner {
-
-    @Override
-    public void run(String... args) throws Exception {
-        System.out.println(&quot;He said: Hello, how are you ?&quot;);
+    public static void main(String[] args) {
+        SpringApplication.run(BlogCodeApplication.class, args);
     }
-}
 
-@Component
-@Order(2)
-class GreetingReply implements CommandLineRunner {
 
-    @Override
-    public void run(String... args) throws Exception {
-        System.out.println(&quot;She replied: I am doing good..thanks for asking!&quot;);
+    @Component
+    @Order(1)
+    class Greeting implements CommandLineRunner {
+
+        @Override
+        public void run(String... args) throws Exception {
+            System.out.println("He said: Hello, how are you ?");
+        }
     }
-}
-</code></pre>
 
-<h2 id="toc_3">}</h2>
+    @Component
+    @Order(2)
+    class GreetingReply implements CommandLineRunner {
 
+        @Override
+        public void run(String... args) throws Exception {
+            System.out.println("She replied: I am doing good..thanks for asking!");
+        }
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>When we run this application, the following output is printed on console.</p>
-
-<h2 id="source-java">[source,java]</h2>
-
-<p>&hellip;.
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">....
 He said: Hello, how are you ?
-She replied: I am doing good..thanks for asking! :</p>
-
-<h2 id="toc_5">&hellip;.</h2>
-
-<p><em>Conclusion</em></p>
-
-<p>In this article, we saw how to use <code>CommandLineRunner</code> interface. It is very usefull when we don&rsquo;t have any UI to trigger something or we want something to execute just after the application context is up.</p>
+She replied: I am doing good..thanks for asking! :
+....</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Conclusion</strong></p>
+</div>
+<div class="paragraph">
+<p>In this article, we saw how to use <code>CommandLineRunner</code> interface. It is very usefull when we don&#8217;t have any UI to trigger something or we want something to execute just after the application context is up.</p>
+</div>
         
     <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
         
@@ -230,15 +242,15 @@ She replied: I am doing good..thanks for asking! :</p>
         <h5>Recent Posts</h5>
         <ul class="list-unstyled posts-recent">
             
-                <li><a href="http://www.talcrafts.com/2017/03/what-is-data-science/">What is data science?</a></li>
+                <li><a href="http://www.talcrafts.com/2017/10/how-to-install-gradle-using-sdkman/">How to install Gradle using SDKMAN</a></li>
+            
+                <li><a href="http://www.talcrafts.com/2017/03/elasticsearch-dynamic-mapping/">Elasticsearch Dynamic Mapping</a></li>
             
                 <li><a href="http://www.talcrafts.com/2017/03/edge-computing/">Edge Computing</a></li>
             
                 <li><a href="http://www.talcrafts.com/2017/03/make-your-java-code-concise-with-lombok/">Make your Java code concise with Lombok</a></li>
             
                 <li><a href="http://www.talcrafts.com/2017/03/create-a-static-website-with-hugo-and-host-it-with-github-pages/">Create a static website with Hugo and Host it with Github Pages</a></li>
-            
-                <li><a href="http://www.talcrafts.com/2017/03/spring-boot-commandlinerunner-interface/">Spring boot CommandLineRunner Interface</a></li>
             
         </ul>
     </div>
@@ -268,13 +280,13 @@ She replied: I am doing good..thanks for asking! :</p>
                     
                         <li><a href="http://www.talcrafts.com/categories/blog">blog</a></li>
                     
-                        <li><a href="http://www.talcrafts.com/categories/data-science">data-science</a></li>
-                    
                         <li><a href="http://www.talcrafts.com/categories/edge-computing">edge-computing</a></li>
                     
-                        <li><a href="http://www.talcrafts.com/categories/java">java</a></li>
+                        <li><a href="http://www.talcrafts.com/categories/elasticsearch">elasticsearch</a></li>
                     
-                        <li><a href="http://www.talcrafts.com/categories/spring">spring</a></li>
+                        <li><a href="http://www.talcrafts.com/categories/gradle">gradle</a></li>
+                    
+                        <li><a href="http://www.talcrafts.com/categories/java">java</a></li>
                     
                 </ul>
             </div>
@@ -289,8 +301,8 @@ She replied: I am doing good..thanks for asking! :</p>
         <h5>Support This Site</h5>
         <p>
             If my blog was helpful to you, then please consider visiting my
-            <a href="http://amzn.com/w/1YU2424SGEF1B">Amazon Wishlist</a> or donating via <a href="https://paypal.me/nraboy">Paypal</a>
-            or <a href="https://cash.me/$nraboy">Square Cash</a>
+            <a href="#">Amazon Wishlist</a> or donating via <a href="#">Paypal</a> 
+            or <a href="#">Square Cash</a> 
         </p>
     </div>
 </div>
@@ -352,7 +364,9 @@ She replied: I am doing good..thanks for asking! :</p>
     </a>
 </div>
 <script src="http://www.talcrafts.com/js/jquery-2.2.1.min.js"></script>
+<script src="http://www.talcrafts.com/js/tether.min.js"></script>
 <script src="http://www.talcrafts.com/js/bootstrap.min.js"></script>
+<script src="http://www.talcrafts.com/js/mdb.min.js"></script>
 <script src="http://www.talcrafts.com/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>

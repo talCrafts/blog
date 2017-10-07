@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sdkman on TalCrafts Blog</title>
+    <link>http://www.talcrafts.com/tags/sdkman/index.xml</link>
+    <description>Recent content in Sdkman on TalCrafts Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://www.talcrafts.com/tags/sdkman/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to install Gradle using SDKMAN</title>
+      <link>http://www.talcrafts.com/2017/10/how-to-install-gradle-using-sdkman/</link>
+      <pubDate>Sat, 07 Oct 2017 20:43:11 +0530</pubDate>
+      
+      <guid>http://www.talcrafts.com/2017/10/how-to-install-gradle-using-sdkman/</guid>
+      <description>&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Gradle is a general purpose dependency management and build automation tool.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_pre_requisites&#34;&gt;Pre-requisites&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_java_version_7_or_higher&#34;&gt;Java ( version 7 or higher)&lt;/h3&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_installation_with_package_manager&#34;&gt;Installation with package Manager&lt;/h3&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;strong&gt;SDKMAN!&lt;/strong&gt; is a tool for managing parallel versions of multiple Software Development Kits on most Unix based systems. It provides a convenient Command Line Interface (CLI) and API for installing, switching, removing and listing Candidates. Formerly known as GVM the Groovy enVironment Manager, it was inspired by the very useful RVM and rbenv tools, used at large by the Ruby community.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ `sdk install gradle 4.2.1`&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;here version is optional. If we don&amp;#8217;t specify any version, SDK will fetch the latest stable version.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Once it is done with installation, it will ask to make the recently installed version as default.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;You will see output something like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Downloading: gradle 4.2.1
+
+In progress...
+
+######################################################################## 100.0%
+
+Installing: gradle 4.2.1
+Done installing!
+
+Do you want gradle 4.2.1 to be set as default? (Y/n): y
+
+Setting gradle 4.2.1 as default.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Once done run following command to check Gradle version&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;code&gt;$ gradle -v&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;It should give following output:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ gradle -v
+
+------------------------------------------------------------
+Gradle 4.2.1
+------------------------------------------------------------
+
+Build time:   2017-10-02 15:36:21 UTC
+Revision:     a88ebd6be7840c2e59ae4782eb0f27fbe3405ddf
+
+Groovy:       2.4.12
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_144 (Oracle Corporation 25.144-b01)
+OS:           Linux 4.4.0-96-generic amd64&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

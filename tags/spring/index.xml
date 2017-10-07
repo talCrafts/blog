@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on TalCrafts Blog</title>
+    <link>http://www.talcrafts.com/tags/spring/index.xml</link>
+    <description>Recent content in Spring on TalCrafts Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://www.talcrafts.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Spring bean Scopes</title>
+      <link>http://www.talcrafts.com/2017/04/spring-bean-scopes/</link>
+      <pubDate>Sun, 09 Apr 2017 16:55:52 +0530</pubDate>
+      
+      <guid>http://www.talcrafts.com/2017/04/spring-bean-scopes/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Spring bean scope defines what type of bean will be created and injected when called. The current version of Spring support following scopes:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Scope&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Singleton&lt;/td&gt;
+&lt;td&gt;Returns a single instance of the bean per container.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Prototype&lt;/td&gt;
+&lt;td&gt;Returns a new instance of the bean each time is it invoked.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Request&lt;/td&gt;
+&lt;td&gt;Scopes a single bean definition to the lifecycle of a single HTTP request; that is, each HTTP request has its own instance of a bean created off the back of a single bean definition. Only valid in the context of a web-aware Spring ApplicationContext.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;
+| Session | Scopes a single bean definition to the lifecycle of an HTTP Session. Only valid in the context of a web-aware Spring &lt;code&gt;ApplicationContext&lt;/code&gt;.
+| Global Session | Scopes a single bean definition to the lifecycle of a global HTTP Session. Typically only valid when used in a Portlet context. Only valid in the context of a web-aware Spring &lt;code&gt;ApplicationContext&lt;/code&gt;.
+| Application | Scopes a single bean definition to the lifecycle of a ServletContext. Only valid in the context of a web-aware Spring &lt;code&gt;ApplicationContext&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;| WebSocket | Scopes a single bean definition to the lifecycle of a WebSocket. Only valid in the context of a web-aware Spring ApplicationContext.
+|===&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
